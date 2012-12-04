@@ -12,7 +12,7 @@ function escreve_data(){
     $semana = date('D');
     switch ($semana){
         case 'Mon': $data = "Segunda-feira";Break;
-        case 'Tue': $data = "Terçaa-feira";break;
+        case 'Tue': $data = "Terça-feira";break;
         case 'Wed': $data = "Quarta-feira";break;
         case 'Thu': $data = "Quinta-feira";break;
         case 'Fri': $data = "Sexta-feira";break;
