@@ -1,0 +1,30 @@
+/*--------------------------------------------------
+    Criado em : 10/10/2012, 16:21:18        
+    
+    CSS Padrão
+    Os que estão marcados com /** / é que não é tão padrão assim.
+
+--------------------------------------------------*/
+root { 
+    display: block;
+}
+body{
+    margin: 0px 0px 0px 0px;   
+    color: #4F5155;  /**/
+    font-family: Arial; /**/
+}
+a{
+    text-decoration: none;
+    color: #4F5155;
+}
+h1{
+    margin: 0px;
+}
+img{
+    border: 0;
+}
+h1,h2,h3,h4,h5{
+    margin: 0px;
+}
+
+
