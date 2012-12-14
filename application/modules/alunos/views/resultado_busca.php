@@ -1,7 +1,8 @@
 <div style="width:600px;">
     <?php echo br(2); ?>
     <ul>
-        <?php       
+        <?php         
+        if($alunos){
             foreach ($alunos as $aluno) :    
                 $url = base_url('alunos/exibir/'.$aluno->ID_ALUNO);
                 echo "<a href='".$url."'>";
@@ -11,6 +12,11 @@
                     echo "</li>";
                 echo "</a>";
             endforeach;
+        }
+        else{
+            echo "<b>Nenhum aluno encontrado</b>";
+            echo br(4)."Valor digitado: '".$digitado."'";
+        }
         ?>
     </ul>
     

@@ -86,13 +86,14 @@ class Alunos extends CI_Controller {
         $this->load->view('menu');
         
         if ($this->input->post('busca') == FALSE){
-           
+            
             $this->load->view('form_busca');
+            
         }
         else{
             $aluno = $this->input->post('busca');
-            $dados['alunos'] = $this->alunos_model->busca($aluno);
-           
+            $dados['alunos'] = $this->alunos_model->busca($aluno);      
+            $dados['digitado'] = $aluno; 
             $this->load->view('form_busca');
             $this->load->view('resultado_busca',$dados);
         }

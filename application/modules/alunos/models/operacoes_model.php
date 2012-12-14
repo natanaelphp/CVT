@@ -15,6 +15,7 @@ class Operacoes_model extends CI_model{
     public function consulta_faltas($aluno){
         $this->db->select('dataHora');
         $this->db->where('ID_ALUNO',$aluno);
+        $this->db->order_by('ID_FALTA','desc');
         $query = $this->db->get('faltas');
         return $query->result();
     }
