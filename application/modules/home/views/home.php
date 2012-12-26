@@ -17,7 +17,7 @@
 
     foreach ($icones as $icone) {
         echo "<a href='".$icone['link']."'>";
-            echo "<div id='icon'>";
+            echo "<div class='icon'>";
                     echo heading($icone['titulo'],4);
                     echo $icone['img'];                  
             echo "</div>";
