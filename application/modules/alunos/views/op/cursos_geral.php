@@ -11,6 +11,10 @@
     <?php    
     echo "<table cellpadding='5'>"; 
         if ($cursos) :
+            echo "<th>Curso</th>";
+            echo "<th>Situação</th>";
+            echo "<th colspan='2'></th>";
+            
             foreach ($cursos as $curso) {
                 echo "<tr>";
                     echo "<td width='400'>".$curso->nome."</td>";

@@ -42,12 +42,12 @@ Fim das definições gerais
 Inicio das definições de elementos mais especificos
 ---------------------------------*/
 
-#icon{
+.icon{
     display: inline-block;
     width: 250px;
     padding-bottom: 20px;   
 }
-#icon:hover{
+.icon:hover{
     background-color: #f2f2f2;
 }
 .error{
@@ -94,7 +94,9 @@ table th {
 }
 table td {
     border: 1px dotted #d0d0d0;
+    background-color: #FFFFFF;
     text-align: left;
+    
 }
 /*---------------------------------
     Listas

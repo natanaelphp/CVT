@@ -125,6 +125,7 @@
 			-moz-transition: opacity .3s ease-in;
 			-o-transition: opacity .3s ease-in;
 			-ms-transition: opacity .3s ease-in;
+                        
 		}
 
 		/* Showing the submenu when the user is hovering the parent link */

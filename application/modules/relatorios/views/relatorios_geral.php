@@ -15,11 +15,11 @@ echo br();
         array ("titulo" => "Relatório de alunos",
                "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/alunos'),
         array ("titulo" => "Relatório completo de Alunos",
-               "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/'),
+               "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/alunosCompleto'),
         array ("titulo" => "Relatório de empresas",
-               "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/'),
+               "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/empresas'),
         array ("titulo" => "Relatório de empresas separando empregados e dependentes",
-               "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/'),
+               "img" => img('asset/img/relatorios/rel_man.png'),"link" => base_url().'relatorios/empresas2'),
     );
 
     echo "<ul>";

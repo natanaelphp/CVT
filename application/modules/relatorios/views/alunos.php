@@ -18,7 +18,7 @@ a img {
     
     <?php echo br(3); ?>
     
-    <table cellpadding='5' id='al'>
+    <table cellpadding='5'>
     <?php
         $i = 0;
         
