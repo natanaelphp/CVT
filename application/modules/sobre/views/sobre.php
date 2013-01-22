@@ -25,8 +25,12 @@
         #form-contato input[type=submit]{
             width: 200px;
         }
+        #creditos{
+            clear: both;
+        }
     </style>
     <div id='dados'>
+        <img src="<?php echo base_url('/asset/img/sobre/responsive.png'); ?>">
         Natanael
     </div>
     <div id='form-contato'>
@@ -48,11 +52,9 @@
             echo form_close('');
         ?>
     </div>
-    <?php echo br(20); ?>
+    <div id="creditos">
     Icones: 
     <?php echo anchor('http://www.customicondesign.com/','www.customicondesign.com',array('target' => '_blank'));?>
+    </div>
     
-    <?php
-        //code..
-    ?>
     
