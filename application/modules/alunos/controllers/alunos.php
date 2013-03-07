@@ -22,7 +22,7 @@ class Alunos extends CI_Controller {
         $this->form_validation->set_rules('nome', 'Nome', 'required');
         $this->form_validation->set_rules('email', 'Email', 'valid_email');
         $this->form_validation->set_message('required','O campo %s é obrigatório.');
-        $this->form_validation->set_message('valid_email','O campo %s deve conter um email válido.');
+        $this->form_validation->set_message('valid_email','O campo %s deve conter um endereço de email válido.');
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
         
         if ($this->form_validation->run() == FALSE){

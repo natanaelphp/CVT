@@ -4,10 +4,25 @@ class Sobre extends CI_Controller {
     
     public function index(){
         $this->load->helper('form');
+        $this->load->library('form_validation');
         
-        $this->load->view('header');
-        $this->load->view('sobre');
-        $this->load->view('footer');
+        $this->form_validation->set_rules('nome','Nome','required');
+        $this->form_validation->set_rules('email','Email','required|valid_email');
+        $this->form_validation->set_rules('assunto','Assunto','required');
+        $this->form_validation->set_rules('msg','Mensagem','required');
+        $this->form_validation->set_message('required','O campo %s é obrigatório.');
+        $this->form_validation->set_message('valid_email','O campo %s deve conter um endereço de email válido');
+        $this->form_validation->set_error_delimiters('<div class="ui-state-error ui-corner-all erro">', '</div>');
+        
+        if($this->form_validation->run() == FALSE){
+            $this->load->view('header');
+            $this->load->view('sobre');
+            $this->load->view('footer');
+        }
+        else{
+            $this->enviaEmail();
+        }
+        
     }
     
     public function enviaEmail(){
@@ -31,13 +46,14 @@ class Sobre extends CI_Controller {
         //$this->email->attach('asset/img/project.png');
 
         if ($this->email->send()){
-            echo "enviado";
+           $dados['msg'] = 'sucesso';
         }
         else {
-            echo "falha no engano";
+            $dados['msg'] = 'falha';
         }
-                
-                
+        $this->load->view('header');
+        $this->load->view('msg_email',$dados);
+        $this->load->view('footer');
     }
         
 }
