@@ -10,6 +10,7 @@ class Frequencia_model extends CI_Model{
         $this->db->select('ID_horarios,hora,dia');
         $this->db->from('horarios');
         $this->db->like('dia',$dia);
+        $this->db->order_by('hora');
         return $query = $this->db->get();
     }
     
