@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Cursos_model extends CI_Model {
     
@@ -7,6 +7,7 @@ class Cursos_model extends CI_Model {
     }
 
     public function lista(){
+        $this->db->order_by('nome');
         $query = $this->db->get('cursos');
         return $query->result();
     }

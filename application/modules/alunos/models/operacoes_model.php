@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Operacoes_model extends CI_model{
     function __construct() {
@@ -8,7 +8,7 @@ class Operacoes_model extends CI_model{
     public function consulta_horario($aluno){
         $this->db->select('horario');
         $this->db->where('ID_ALUNO',$aluno);
-        $query = $this->db->get('cad_alunos');
+        $query = $this->db->get('alunos');
         return $query->result();
     }
     

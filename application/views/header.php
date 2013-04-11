@@ -10,7 +10,7 @@
         <!-- jquery -->
         <?php echo link_tag("asset/js/jquery/css/smoothness/jquery-ui-1.9.0.custom.css"); ?>
         <script src="<?php echo base_url('asset/js/jquery/js/jquery-1.8.2.js'); ?>"></script>
-	<script src="<?php echo base_url('asset/js/jquery/js/jquery-ui-1.9.0.custom.js'); ?>"></script>
+        <script src="<?php echo base_url('asset/js/jquery/js/jquery-ui-1.9.0.custom.js'); ?>"></script>
         
         <script src="<?php echo base_url('asset/js/jquery.cvt.js'); ?>"></script>
         <!-- jquery -->

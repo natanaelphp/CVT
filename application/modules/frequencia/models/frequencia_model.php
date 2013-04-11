@@ -1,4 +1,5 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 
 class Frequencia_model extends CI_Model{
     
@@ -16,7 +17,7 @@ class Frequencia_model extends CI_Model{
     
     public function lista_alunos($horario){
         $this->db->select('ID_ALUNO,nome');
-        $this->db->from('cad_alunos');
+        $this->db->from('alunos');
         $this->db->where('horario',$horario);
         $this->db->order_by('nome');
         $query = $this->db->get();
@@ -25,7 +26,7 @@ class Frequencia_model extends CI_Model{
     
     public function verificaFaltas($aluno){
         $this->db->select('ID_ALUNO,contFaltas');
-        $this->db->from('cad_alunos');
+        $this->db->from('alunos');
         $this->db->where('ID_ALUNO',$aluno);
         $query = $this->db->get();
         return $query->result();
@@ -35,7 +36,7 @@ class Frequencia_model extends CI_Model{
     public function atualizaStatus($aluno,$faltas){
         $this->db->where('ID_ALUNO',$aluno);
         $data = array('contFaltas' => $faltas);
-        $this->db->update('cad_alunos',$data);
+        $this->db->update('alunos',$data);
     }
     
     public function insereFalta($aluno,$data){
@@ -51,7 +52,7 @@ class Frequencia_model extends CI_Model{
     public function retiraCurso($aluno){
         $this->db->where('ID_ALUNO',$aluno);
         $campos = array('horario' => 0);
-        $this->db->update('cad_alunos',$campos);
+        $this->db->update('alunos',$campos);
     }
     
 

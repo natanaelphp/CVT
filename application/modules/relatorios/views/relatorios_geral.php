@@ -5,6 +5,7 @@
 }
 img{
     vertical-align: middle; 
+    margin-right: 20px;
 }
 </style>
 <?php echo heading('Relatórios',2); ?>
